@@ -5,3 +5,13 @@ environments:
 - name: dev
 - name: staging
 - name: prod
+plugins:
+  extractors:
+  - name: tap-clickup
+    variant: autoidm
+    pip_url: tap-clickup
+    config:
+      flattening_enabled: true
+      flattening_max_depth: 3
+      api_token:
+        sensitive: true
